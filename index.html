@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>株式会社プロローグ | Indeed Platinum Partner</title>
+  <meta name="description" content="株式会社プロローグは、Indeed Platinum PartnerとしてIndeed運用を担う専業会社です。表示、クリック、応募、採用単価を求人ごとに読み、次の一手へ落とします。" />
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #111827;
+      --navy: #071a33;
+      --navy2: #0b2a4d;
+      --blue: #2557a7;
+      --gold: #b08a42;
+      --muted: #5d6776;
+      --line: #dfe5ee;
+      --soft: #f6f7f8;
+      --warm: #fbfaf7;
+      --white: #fff;
+      --shadow: 0 24px 70px rgba(7, 26, 51, .14);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
+      color: var(--ink);
+      background: var(--warm);
+      letter-spacing: 0;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    .header {
+      position: sticky; top: 0; z-index: 10;
+      border-bottom: 1px solid rgba(223, 229, 238, .86);
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(16px);
+    }
+    .header-inner { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 900; }
+    .brand-mark { width: 34px; height: 34px; display: grid; place-items: center; background: var(--navy); color: #fff; font-weight: 900; }
+    .brand small { display: block; color: var(--muted); font-size: 11px; font-weight: 700; margin-top: 2px; }
+    .nav { display: flex; align-items: center; gap: 20px; color: var(--muted); font-size: 13px; font-weight: 800; }
+    .nav a:last-child { color: #fff; background: var(--blue); padding: 11px 16px; }
+    .hero { background: linear-gradient(135deg, #06172c 0%, #0b2a4d 58%, #123a66 100%); color: #fff; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.02fr .98fr; gap: 48px; align-items: center; min-height: 680px; padding: 74px 0 72px; }
+    .kicker { color: var(--gold); font-size: 12px; font-weight: 900; text-transform: uppercase; margin: 0 0 18px; }
+    .hero h1 { font-family: "Hiragino Mincho ProN", "Yu Mincho", serif; font-weight: 500; font-size: clamp(42px, 6vw, 82px); line-height: 1.12; margin: 0; text-wrap: balance; }
+    .lead { margin: 28px 0 0; color: rgba(255,255,255,.76); font-size: 16px; line-height: 2; max-width: 640px; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 20px; font-size: 14px; font-weight: 900; border: 1px solid transparent; }
+    .btn-primary { background: #fff; color: var(--navy); }
+    .btn-secondary { border-color: rgba(255,255,255,.28); color: #fff; }
+    .hero-card { background: rgba(255,255,255,.94); color: var(--ink); box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,.35); padding: 26px; }
+    .platinum-badge { display: grid; place-items: center; aspect-ratio: 1; border: 24px solid #1f1f22; border-radius: 50%; background: #fff; max-width: 280px; margin: 0 auto 26px; text-align: center; }
+    .platinum-badge strong { display: block; color: #284f92; font-size: 42px; line-height: 1; }
+    .platinum-badge span { display: block; margin-top: 12px; padding-top: 12px; border-top: 3px solid #555; color: #555; font-size: 25px; font-weight: 300; }
+    .dash { border-top: 1px solid var(--line); padding-top: 22px; }
+    .dash-head { display: flex; justify-content: space-between; gap: 16px; align-items: start; }
+    .dash-head h2 { margin: 0; font-size: 18px; line-height: 1.6; }
+    .chip { background: #ecf3ff; color: var(--blue); padding: 7px 10px; font-size: 12px; font-weight: 900; white-space: nowrap; }
+    .metrics { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 18px; }
+    .metric { border: 1px solid var(--line); background: #fff; padding: 14px; }
+    .metric b { display: block; color: var(--navy); font-size: 22px; }
+    .metric span { color: var(--muted); font-size: 12px; font-weight: 800; }
+    section { padding: 86px 0; }
+    .section-white { background: #fff; }
+    .section-navy { background: var(--navy); color: #fff; }
+    .section-title { display: grid; gap: 14px; margin-bottom: 34px; }
+    .section-title h2 { font-family: "Hiragino Mincho ProN", "Yu Mincho", serif; font-size: clamp(30px, 4vw, 48px); font-weight: 500; line-height: 1.34; margin: 0; text-wrap: balance; }
+    .section-title p { margin: 0; color: var(--muted); line-height: 1.9; max-width: 760px; }
+    .section-navy .section-title p { color: rgba(255,255,255,.72); }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .card { background: #fff; border: 1px solid var(--line); padding: 24px; box-shadow: 0 16px 46px rgba(7,26,51,.06); }
+    .section-navy .card { background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.14); color: #fff; }
+    .card h3 { margin: 0 0 12px; font-size: 18px; line-height: 1.6; }
+    .card p { margin: 0; color: var(--muted); line-height: 1.8; font-size: 14px; }
+    .section-navy .card p { color: rgba(255,255,255,.72); }
+    .proof b { color: var(--blue); font-size: 34px; font-family: "Hiragino Mincho ProN", "Yu Mincho", serif; font-weight: 500; }
+    .problem-list { columns: 2; column-gap: 36px; list-style: none; padding: 0; margin: 0; }
+    .problem-list li { break-inside: avoid; display: flex; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); color: var(--muted); line-height: 1.8; }
+    .problem-list li:before { content: ""; width: 8px; height: 8px; margin-top: 12px; background: var(--gold); flex: 0 0 auto; }
+    .flow { counter-reset: step; display: grid; gap: 10px; }
+    .flow li { counter-increment: step; list-style: none; display: grid; grid-template-columns: 54px 1fr; align-items: center; gap: 14px; border: 1px solid var(--line); background: #fff; padding: 14px 18px; font-weight: 900; }
+    .flow li:before { content: counter(step, decimal-leading-zero); display: grid; place-items: center; width: 42px; height: 42px; background: var(--navy); color: #fff; font-size: 13px; }
+    .profile { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--line); }
+    .profile th, .profile td { border-bottom: 1px solid var(--line); text-align: left; padding: 18px 20px; vertical-align: top; line-height: 1.8; }
+    .profile th { width: 190px; background: var(--soft); font-size: 13px; }
+    .profile td { color: var(--muted); }
+    .final { background: linear-gradient(135deg, #071a33, #123a66); color: #fff; text-align: center; }
+    .final h2 { font-family: "Hiragino Mincho ProN", "Yu Mincho", serif; font-size: clamp(30px, 4vw, 50px); font-weight: 500; line-height: 1.35; margin: 0; }
+    .final p { margin: 18px auto 0; color: rgba(255,255,255,.75); line-height: 2; max-width: 760px; }
+    .footer { background: #050d18; color: rgba(255,255,255,.64); padding: 34px 0; font-size: 12px; }
+    .note { margin-top: 28px; color: var(--muted); font-size: 12px; line-height: 1.8; }
+    @media (max-width: 860px) {
+      .nav { display: none; }
+      .hero-grid, .grid-2 { grid-template-columns: 1fr; }
+      .hero-grid { min-height: auto; padding: 48px 0 56px; gap: 34px; }
+      section { padding: 62px 0; }
+      .grid-4, .grid-3 { grid-template-columns: 1fr; }
+      .problem-list { columns: 1; }
+      .profile th, .profile td { display: block; width: 100%; padding: 14px 16px; }
+      .profile th { border-bottom: 0; }
+      .platinum-badge { max-width: 230px; border-width: 20px; }
+      .platinum-badge strong { font-size: 34px; }
+      .platinum-badge span { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="株式会社プロローグ">
+        <span class="brand-mark">P</span>
+        <span>PROLOGUE<small>Indeed Platinum Partner</small></span>
+      </a>
+      <nav class="nav" aria-label="主要ナビゲーション">
+        <a href="#platinum">Platinum</a>
+        <a href="#problem">課題</a>
+        <a href="#reasons">選ばれる理由</a>
+        <a href="#services">サービス</a>
+        <a href="#company">会社情報</a>
+        <a href="#contact">無料相談</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="kicker">Indeed特別認定パートナー / Platinum Partner</p>
+          <h1>Indeedだけを、採用の数字で動かす。</h1>
+          <p class="lead">株式会社プロローグは、プロローグ・ホールディングス傘下でIndeed運用を担う専業会社です。表示、クリック、応募、採用単価を求人ごとに読み、原稿・予算・応募後フローまで次の一手に落とします。</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#contact">無料相談する</a>
+            <a class="btn btn-secondary" href="#problem">Indeed運用を見直す</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Indeed Platinum Partnerと解析指標">
+          <div class="platinum-badge"><div><strong>indeed</strong><span>PLATINUM<br />PARTNER</span></div></div>
+          <div class="dash">
+            <div class="dash-head">
+              <h2>求人別・採用数字の診断メモ</h2>
+              <span class="chip">改善提案 12件</span>
+            </div>
+            <div class="metrics">
+              <div class="metric"><span>表示回数</span><b>128,400</b></div>
+              <div class="metric"><span>クリック率</span><b>3.8%</b></div>
+              <div class="metric"><span>応募数</span><b>246</b></div>
+              <div class="metric"><span>応募単価</span><b>¥4,820</b></div>
+              <div class="metric"><span>採用単価</span><b>¥68,000</b></div>
+              <div class="metric"><span>優先施策</span><b>4件</b></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="platinum" class="section-white">
+      <div class="container">
+        <div class="section-title">
+          <p class="kicker">Platinum Advantage</p>
+          <h2>Platinumの称号を、採用改善の優位性に変える。</h2>
+          <p>Indeed公式の認定パートナーへ相談するメリットとして、豊富な実績と最新情報、広告運用・分析、原稿作成、社内工数の削減が示されています。プロローグはその上位カテゴリであるPlatinumの称号を、Indeed専業の体制で採用改善の実務へ落とし込みます。</p>
+        </div>
+        <div class="grid-3">
+          <article class="card"><h3>豊富な実績と最新情報</h3><p>媒体仕様や採用市場の変化を踏まえ、求人ごとの運用判断を更新し続けます。</p></article>
+          <article class="card"><h3>広告運用・分析・原稿作成</h3><p>出稿代行ではなく、表示、クリック、応募、採用単価を見て原稿と予算を組み替えます。</p></article>
+          <article class="card"><h3>採用担当者の工数削減</h3><p>運用、レポート、改善提案を定例化し、社内で迷い続ける時間を減らします。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-white">
+      <div class="container grid-4">
+        <article class="card proof"><b>5,000</b><h3>累計支援社数</h3><p>多様な業種・職種で培った採用支援の知見をIndeed運用へ接続します。</p></article>
+        <article class="card proof"><b>93%</b><h3>顧客満足度</h3><p>運用報告だけでなく、次の改善提案まで伴走する支援品質を重視します。</p></article>
+        <article class="card proof"><b>15年以上</b><h3>採用支援経験</h3><p>経験豊富なコンサルタントが、求人設計から改善判断まで支援します。</p></article>
+        <article class="card proof"><b>専属</b><h3>解析チーム</h3><p>表示・クリック・応募・採用単価を読み解き、改善施策へ落とし込みます。</p></article>
+      </div>
+      <div class="container"><p class="note">数値は現時点の仮置き表記です。公開前に根拠、対象期間、調査条件を確認し、注釈を確定します。</p></div>
+    </section>
+
+    <section id="problem">
+      <div class="container">
+        <div class="section-title">
+          <p class="kicker">Problem</p>
+          <h2>Indeedは、出した後から差がつく。</h2>
+          <p>表示されない、押されない、応募されない、採用に残らない。どこで止まっているかを見ないまま原稿だけ直しても、成果は戻りません。</p>
+        </div>
+        <ul class="problem-list">
+          <li>求人ごとの表示数に偏りがある</li>
+          <li>クリックされる職種名になっていない</li>
+          <li>応募前に条件で離脱している</li>
+          <li>応募後の歩留まりまで見えていない</li>
+          <li>予算が成果の低い求人に残っている</li>
+          <li>改善判断が担当者の感覚に寄っている</li>
+          <li>応募単価だけで良し悪しを決めている</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="reasons" class="section-navy">
+      <div class="container">
+        <div class="section-title">
+          <p class="kicker">Why Prologue</p>
+          <h2>Indeed専業だから、改善の焦点がぶれない。</h2>
+          <p>支援領域をIndeedに集中させることで、求人ごとの詰まり、応募後の歩留まり、採用単価まで深く見て改善順を決めます。</p>
+        </div>
+        <div class="grid-3">
+          <article class="card"><h3>Indeedに集中する運用体制</h3><p>リソースを分散させず、Indeedの表示・クリック・応募・採用単価を求人ごとに読み分けます。</p></article>
+          <article class="card"><h3>プラチナムパートナーの知見</h3><p>認定パートナーとして蓄積した運用知見を、日々の改善判断に集中投入します。</p></article>
+          <article class="card"><h3>採用現場まで見る改善</h3><p>応募数だけでなく、面接化・採用率・辞退要因まで確認します。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section-white">
+      <div class="container">
+        <div class="section-title">
+          <p class="kicker">Services</p>
+          <h2>運用代行で終わらせず、改善提案まで一気通貫。</h2>
+          <p>Indeed広告運用、求人原稿改善、採用解析レポート、採用コンサルティングを、採用成果につながる順序で提供します。</p>
+        </div>
+        <div class="grid-4">
+          <article class="card"><h3>Indeed広告運用</h3><p>求人ごとの成果を見ながら、配信状況・予算配分・改善優先度を調整します。</p></article>
+          <article class="card"><h3>求人原稿改善</h3><p>タイトル、職種名、条件表記、訴求軸を見直し、クリックと応募につながる原稿へ改善します。</p></article>
+          <article class="card"><h3>採用解析レポート</h3><p>表示、クリック、応募、応募単価、採用単価を整理し、経営判断しやすいレポートにします。</p></article>
+          <article class="card"><h3>採用コンサルティング</h3><p>応募後歩留まりや採用要件まで踏み込み、採用成果に直結する改善方針を提案します。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container grid-2">
+        <div>
+          <div class="section-title">
+            <p class="kicker">Improvement Flow</p>
+            <h2>解析から改善まで、判断を止めない運用プロセス。</h2>
+          </div>
+        </div>
+        <ol class="flow">
+          <li>現状ヒアリング</li>
+          <li>Indeed掲載状況の確認</li>
+          <li>表示・クリック・応募データの解析</li>
+          <li>原稿・予算・ターゲットの課題整理</li>
+          <li>改善施策の提案</li>
+          <li>運用改善</li>
+          <li>レポート提出・次回改善提案</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="company" class="section-white">
+      <div class="container">
+        <div class="section-title">
+          <p class="kicker">Company Profile</p>
+          <h2>プロローグ・ホールディングス傘下のIndeed専業パートナー。</h2>
+          <p>Indeed運用の専門性と関連会社の人材支援領域を活かし、採用成果の最大化を支援します。</p>
+        </div>
+        <table class="profile">
+          <tbody>
+            <tr><th>会社名</th><td>株式会社プロローグ</td></tr>
+            <tr><th>設立</th><td>2026年6月1日</td></tr>
+            <tr><th>資本金</th><td>50,000,000円</td></tr>
+            <tr><th>所在地</th><td>〒221-0835 神奈川県横浜市神奈川区鶴屋町3丁目32−14 新港ビル 407</td></tr>
+            <tr><th>代表者</th><td>代表取締役社長 CEO 岩崎洋介</td></tr>
+            <tr><th>事業内容</th><td>Indeed運用支援、求人広告運用、採用解析支援</td></tr>
+            <tr><th>所属グループ</th><td>株式会社プロローグ・ホールディングス</td></tr>
+            <tr><th>関連会社</th><td>株式会社プロローグ・ホールディングス｜株式会社タグ・ホールディングス</td></tr>
+            <tr><th>認定</th><td>Indeed特別認定プラチナムパートナー</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="contact" class="final">
+      <div class="container">
+        <h2>今のIndeed運用、どこで止まっているか見ます。</h2>
+        <p>求人ごとの表示・クリック・応募・採用単価をもとに、最初に直すべきポイントを整理します。初回相談では、運用状況の確認から始めます。</p>
+        <div class="cta-row" style="justify-content:center"><a class="btn btn-primary" href="mailto:contact@example.jp">無料で運用状況を相談する</a><a class="btn btn-secondary" href="#top">ページ上部へ戻る</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2026 株式会社プロローグ. GitHub Pages確認用プレビュー。</div>
+  </footer>
+</body>
+</html>
