@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #0b1220;
+  background: #f7f8fa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 96px;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(215, 220, 226, .34), transparent 36rem),
+    #f7f8fa;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+main *,
+header *,
+footer * {
+  min-width: 0;
+}
+
+::selection {
+  background: rgba(0, 78, 168, .18);
+}
+
+:focus-visible {
+  outline: 3px solid rgba(0, 78, 168, .42);
+  outline-offset: 3px;
+}
+
+.container-site {
+  width: min(1200px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+@media (max-width: 640px) {
+  .container-site {
+    width: min(calc(100% - 32px), 1200px);
+  }
+}
+
+.mincho {
+  font-family: "Times New Roman", "Yu Mincho", "Hiragino Mincho ProN", serif;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.safe-break {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
