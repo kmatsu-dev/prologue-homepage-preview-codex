@@ -36,6 +36,8 @@ export type PageHero = {
   lead: string;
 };
 
+const assetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+
 export const TODO_REPLACE_FORM_ENDPOINT = "TODO_REPLACE_FORM_ENDPOINT";
 
 export const siteContent = {
@@ -44,10 +46,10 @@ export const siteContent = {
       companyName: "株式会社プロローグ",
       groupName: "株式会社プロローグ・ホールディングス",
       logoText: "PROLOGUE",
-      logoPath: "/images/prologue-logo.png",
+      logoPath: assetPath("images/prologue-logo.png"),
       certificationLabel: "Indeed特別認定パートナー / Platinum Partner",
-      badgePath: "/images/indeed_partner_platinum.jpg",
-      ogImage: "/images/ogp-placeholder.svg", // TODO_REPLACE
+      badgePath: assetPath("images/indeed_partner_platinum.jpg"),
+      ogImage: assetPath("images/indeed_partner_platinum.jpg"),
     },
     navigation: [
       { label: "Platinum", href: "/#platinum" },
@@ -103,7 +105,7 @@ export const siteContent = {
       seo: {
         title: "株式会社プロローグ | Indeed Platinum Partner",
         description: "株式会社プロローグは、Indeed Platinum PartnerとしてIndeed運用を担う専業会社です。表示、クリック、応募、採用単価を求人ごとに読み、次の一手へ落とします。",
-        ogImage: "/images/ogp-placeholder.svg",
+        ogImage: assetPath("images/indeed_partner_platinum.jpg"),
       },
     },
     {
@@ -112,7 +114,7 @@ export const siteContent = {
       seo: {
         title: "サービス | プロローグ",
         description: "求人設計、原稿改善、広告運用、解析レポート、改善提案まで一気通貫で支援します。",
-        ogImage: "/images/ogp-placeholder.svg",
+        ogImage: assetPath("images/indeed_partner_platinum.jpg"),
       },
     },
     {
@@ -121,7 +123,7 @@ export const siteContent = {
       seo: {
         title: "実績・支援事例 | プロローグ",
         description: "累計5,000社の支援で培った、Indeed運用の改善実績と支援事例を紹介します。",
-        ogImage: "/images/ogp-placeholder.svg",
+        ogImage: assetPath("images/indeed_partner_platinum.jpg"),
       },
     },
     {
@@ -130,7 +132,7 @@ export const siteContent = {
       seo: {
         title: "解析力 | プロローグ",
         description: "応募単価、求人別CVR、採用率などを深く解析し、改善施策へ接続します。",
-        ogImage: "/images/ogp-placeholder.svg",
+        ogImage: assetPath("images/indeed_partner_platinum.jpg"),
       },
     },
     {
@@ -139,7 +141,7 @@ export const siteContent = {
       seo: {
         title: "選ばれる理由 | プロローグ",
         description: "認定、実績、解析力、経験豊富な運用体制。プロローグが選ばれる理由を紹介します。",
-        ogImage: "/images/ogp-placeholder.svg",
+        ogImage: assetPath("images/indeed_partner_platinum.jpg"),
       },
     },
     {
@@ -148,7 +150,7 @@ export const siteContent = {
       seo: {
         title: "お問い合わせ | プロローグ",
         description: "Indeed運用や採用課題について、初回無料相談を受け付けています。",
-        ogImage: "/images/ogp-placeholder.svg",
+        ogImage: assetPath("images/indeed_partner_platinum.jpg"),
       },
     },
     {
@@ -157,7 +159,7 @@ export const siteContent = {
       seo: {
         title: "会社情報 | プロローグ",
         description: "プロローグの会社概要、グループ情報、認定・実績について掲載しています。",
-        ogImage: "/images/ogp-placeholder.svg",
+        ogImage: assetPath("images/indeed_partner_platinum.jpg"),
       },
     },
     {
@@ -166,7 +168,7 @@ export const siteContent = {
       seo: {
         title: "プラチナパートナーについて | プロローグ",
         description: "Indeed特別認定プラチナムパートナーの価値と、相談するメリットを紹介します。",
-        ogImage: "/images/ogp-placeholder.svg",
+        ogImage: assetPath("images/indeed_partner_platinum.jpg"),
       },
     },
   ] satisfies PageMeta[],
@@ -449,12 +451,12 @@ export const siteContent = {
     relatedCompanies: [
       {
         name: "株式会社プロローグ・ホールディングス",
-        logoPath: "/images/prologue-holdings-logo.png",
+        logoPath: assetPath("images/prologue-holdings-logo.png"),
         note: "人材支援領域を担う関連会社",
       },
       {
         name: "株式会社タグ・ホールディングス",
-        logoPath: "/images/tag-holdings-logo.jpg",
+        logoPath: assetPath("images/tag-holdings-logo.jpg"),
         url: "https://www.tag-group.co.jp/",
         note: "採用支援グループの関連会社",
       },
