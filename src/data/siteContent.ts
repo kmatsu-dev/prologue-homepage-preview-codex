@@ -58,6 +58,7 @@ export const siteContent = {
       { label: "サービス", href: "/#services" },
       { label: "改善フロー", href: "/#process" },
       { label: "FAQ", href: "/#faq" },
+      { label: "会社情報", href: "/company/" },
     ],
     ctas: {
       primary: { label: "無料相談する", href: "/contact/" },
